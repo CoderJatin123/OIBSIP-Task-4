@@ -7,12 +7,79 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/que_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="Question 1"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/que_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="This Question."
+        android:textColor="#131313"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/que_no"
+        app:layout_constraintTop_toBottomOf="@+id/que_no" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/que_view" >
+
+        <RadioGroup
+            android:id="@+id/ans_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/op_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A. option a" />
+
+            <RadioButton
+                android:id="@+id/op_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B. option b" />
+
+            <RadioButton
+                android:id="@+id/op_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C. option c" />
+
+            <RadioButton
+                android:id="@+id/op_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D. option d" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="38dp"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
